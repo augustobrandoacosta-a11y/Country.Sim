@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Country Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-ui">
+        <h1>Empire Expansion</h1>
+        <p>Land Owned: <span id="land-size">10</span> km²</p>
+        <button id="war-btn" onclick="toggleWarMode()">Declare War</button>
+        <div id="status-msg">Select a tool and click a country!</div>
+    </div>
+
+    <div id="map">
+        <div class="country enemy" onclick="attackCountry(this, 'Kingdom of A')">Kingdom of A</div>
+        <div class="country enemy" onclick="attackCountry(this, 'Empire of B')">Empire of B</div>
+        <div class="country enemy" onclick="attackCountry(this, 'Republic of C')">Republic of C</div>
+    </div>
+
+    <div id="weapon-dock" class="hidden">
+        <h3>Select Weapon</h3>
+        <button onclick="setWeapon('Sword', 5)">Sword</button>
+        <button onclick="setWeapon('Gun', 15)">Gun</button>
+        <button onclick="setWeapon('Plane', 50)">Plane</button>
+        <button onclick="setWeapon('Bomb', 100)">Bomb</button>
+        <button onclick="setWeapon('Nuke', 500)">Nuke</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
